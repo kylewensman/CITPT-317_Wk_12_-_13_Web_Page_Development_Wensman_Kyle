@@ -1,0 +1,161 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    
+    /* background-color: #2D9CCA; */
+    background: #2D9CCA url(../media/seamless-pattern-computer-circuit-board-vector-2715328.jpg);
+    background-size: 500px;
+}
+
+/** color applied using the hex code (for white) and by color name (for black) **/ 
+header {
+    background: black;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/** overrides foundations default style and allows my header to go 100% of the screen width **/
+header.grid-container {
+    max-width: 100rem;
+}
+/** The display property (inline-block) displays my navigation items horizontally **/
+nav ul li a {
+    display: inline-block;
+    color:#ffffff;
+    background: #474866;
+    width: 125px;
+    margin-top: 2em;
+}
+/**Adds a hover effect to the navigation (changes the text color to black and background color to a blueish grey) **/
+nav ul li a:hover, nav ul li a:focus {
+    color: black;
+    background:#A9ABB8;
+}
+/** The max-width and margin property keeps the content within my main element 100% of the screen width and centered on the page **/ 
+main {
+    padding-top: 2em;
+    max-width: 100rem;
+    margin: auto;
+    background-color: white;
+}
+/** Adds the padding to all sides of the article (top, right, bottom, left) **/
+article.focal {
+    padding: 0 1em 1em 1em;
+}
+.link-color{
+    color: #29658A;
+}
+/** Adds padding evenly (1em) to all sides **/
+section.atf {
+    padding: 1em;
+    background: #ededed;
+    height: 100%;
+}
+
+/* animation */
+
+h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .05em solid;
+}
+@keyframes typing{
+    from{width: 0};
+}
+@keyframes caret {
+    50%{border-color: transparent};
+}
+@keyframes hideMouse {
+    0%{border-right: none;}
+}
+
+/* Home Page */
+
+
+.Home h1{
+    /*For animation*/ 
+    width: 28ch;/*distance of text*/
+
+    /*Need to change speed and steps per page*/
+    animation: typing 3s steps(28), caret 1s steps(1) 0s 4, hideMouse 30s steps(1) 4s infinite;
+    
+}
+
+#Home-popularProducts section img {
+    height: 100%;
+    float: left;
+    padding-right: .75em;
+    max-height: 35%;
+}
+#Home-popularProducts section a{
+    opacity: 0.5;
+    color: grey;
+}
+#Home-popularProducts section a:visited {
+    color: grey;
+}
+#Home-popularProducts section a:hover, #Home-popularProducts section a:focus {
+    color: black;
+    opacity: 1;
+}
+
+/* About Page */
+
+.About h1{
+    /*For animation - distance of text*/ 
+    width: 5ch;
+
+    /*Need to change speed and steps per page*/
+    animation: typing 1s steps(10), caret 1s steps(1) 0s 2, hideMouse 30s steps(1) 2s infinite;
+}
+.About #ex1 h4{
+    font-family: raleway, cursive;
+}
+
+
+/* Footer */
+
+footer {
+    background: #25274D;
+    color: white;
+    min-height: 2.75rem;
+    text-align: center;
+}
+footer p{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1516px){
+    /* Home Page */
+    #Home-popularProducts section{
+        min-height: 85vh;
+    }
+}
+@media only screen and (max-width: 1288px){
+    body{
+        background: none;
+    }
+    /* Home Page */
+    
+    #Home-popularProducts section img {
+        float: none;
+        padding-right: .75em;
+        height: 40%;
+    }
+    #Home-popularProducts section a{
+        opacity: 1;
+        color: black;
+    }
+    #Home-popularProducts section a:visited {
+        color: black;
+    }
+    #Home-popularProducts section a:hover, #Home-popularProducts section a:focus {
+        color: black;
+    }
+    #Home-popularProducts section{
+        min-height: 100vh;
+    }   
+}
